@@ -66,6 +66,7 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 [item]: # (slide)
 
     **DevNet Mantl Sandbox**
+
     ![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
