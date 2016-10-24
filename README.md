@@ -296,7 +296,7 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 [item]: # (slide)
 
     **Consul UI**
-	![Consul](images/consul1.png)
+    ![Consul](images/consul1.png)
 
 [item]: # (/slide)
 
