@@ -290,7 +290,8 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 [item]: # (slide)
 
     **DevNet Mantl Sandbox**
-	![Mantl Dash](images/mantl-dash.png) 
+
+    ![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
 
@@ -418,7 +419,8 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 [item]: # (slide)
 
     **DevNet Mantl Sandbox**
-	![Mantl Dash](images/mantl-dash.png) 
+
+    ![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
 
@@ -506,7 +508,8 @@ The configuraiton of the traefik behavior can be accomplished with labels in Mar
 [item]: # (slide)
 
     **DevNet Mantl Sandbox**
-	![Mantl Dash](images/mantl-dash.png) 
+
+    ![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
 
