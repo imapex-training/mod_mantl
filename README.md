@@ -8,6 +8,10 @@ A Batteries-Included OpenSource Micro-Service Architecture Stack
 
 [item]: # (/slide)
 
+## Abstract 
+
+Writing code that runs effectively on your laptop isn't enough anymore, if it ever really was.  Even packaging your code as a container image is only a little better.  To be truly powerful as a developer, you need to understand how to effectively deploy your application to a modern infrastructure stack (often called a "Cloud" ;-)  How applications are defined and scheduled across available resources, strategies for service discovery, load balancing and secret management all must be considered by a cloud native application developer.  In this module we'll tackle these topics by working hands on with leading Open Source tools in these areas that have been brought together in the OpenSource Project Mantl.io.  These tools include Marathon, Mesos, Consul, and Traefik.  
+
 [item]: # (slide)
 
 ## Agenda
