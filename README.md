@@ -99,9 +99,9 @@ Though most actual work with Marathon would be through the API, having an unders
 
 [item]: # (/slide)
 
-* Provide Details on the Docker container.  
-
 [item]: # (slide)
+
+* Provide Details on the Docker container.  
 
 **Container Details**
 ![Create App](images/marathon-createapp2.png)
@@ -128,7 +128,7 @@ Though most actual work with Marathon would be through the API, having an unders
 [item]: # (slide)
 
 **Health Checks**
- ![Create App](images/marathon-createapp4.png)
+![Create App](images/marathon-createapp4.png)
 
 [item]: # (/slide)
 
@@ -137,7 +137,6 @@ Though most actual work with Marathon would be through the API, having an unders
 [item]: # (slide)
 
 **Deployed Micro-Service**
-    
 ![Create App](images/marathon-appdemo1.png)
 
 [item]: # (/slide)
@@ -173,7 +172,7 @@ export MARATHON_USER=admin
 export MARATHON_PASSWORD=********	
 # Use your username from above
 export MYUSERNAME=username
-    ```
+```
 
 
 [item]: # (/slide)
@@ -198,8 +197,7 @@ curl -k -X GET -u $MARATHON_USER:$MARATHON_PASSWORD \
 	$MARATHON_URL/apps/$MYUSERNAME/data \
 	| python -m json.tool
 	
-```
-	
+```	
 
 [item]: # (/slide)
 
@@ -215,7 +213,6 @@ curl -k -X PUT -u $MARATHON_USER:$MARATHON_PASSWORD \
 	$MARATHON_URL/apps/$MYUSERNAME/data \
 	-d '{"instances": 3}' \
 	| python -m json.tool
-	
 ```
 
 
@@ -232,7 +229,6 @@ curl -k -X DELETE -u $MARATHON_USER:$MARATHON_PASSWORD \
 		-H "Content-type: application/json" \
 		$MARATHON_URL/apps/$MYUSERNAME/data 
 ```
-
 
 [item]: # (/slide)
 
