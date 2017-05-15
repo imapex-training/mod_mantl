@@ -123,11 +123,12 @@ Though most actual work with Marathon would be through the API, having an unders
 
 [item]: # (/slide)
 
-* Though not required, it is recommended to include Health Checks for all applications.  
-
 [item]: # (slide)
 
+* Though not required, it is recommended to include Health Checks for all applications.  
+
 **Health Checks**
+
 ![Create App](images/marathon-createapp4.png)
 
 [item]: # (/slide)
@@ -137,6 +138,7 @@ Though most actual work with Marathon would be through the API, having an unders
 [item]: # (slide)
 
 **Deployed Micro-Service**
+
 ![Create App](images/marathon-appdemo1.png)
 
 [item]: # (/slide)
