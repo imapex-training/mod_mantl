@@ -1,4 +1,4 @@
 
-    **Mesos Dashboard**
-	![Mesos Dash](images/mesos-dash1.png) 
+**Mesos Dashboard**
+![Mesos Dash](images/mesos-dash1.png) 
 

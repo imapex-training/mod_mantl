@@ -1,5 +1,5 @@
 
-    **GUI Management**
-	![Manage App](images/marathon-manageapp1.png)
+**GUI Management**
+![Manage App](images/marathon-manageapp1.png)
 
 

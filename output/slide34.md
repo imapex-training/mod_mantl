@@ -1,4 +1,4 @@
 
-    **Application Sandbox**
-	![Mesos](images/mesos-sandbox1.png) 
+**Application Sandbox**
+![Mesos](images/mesos-sandbox1.png) 
 

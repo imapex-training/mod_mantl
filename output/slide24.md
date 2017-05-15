@@ -1,5 +1,5 @@
 
-    **DevNet Mantl Sandbox**
+**DevNet Mantl Sandbox**
 
-    ![Mantl Dash](images/mantl-dash.png) 
+![Mantl Dash](images/mantl-dash.png) 
 

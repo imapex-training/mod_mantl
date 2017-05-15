@@ -1,4 +1,4 @@
 
-    **New Application**    
-    ![Create App](images/marathon-createapp1.png)
+**New Application**    
+![Create App](images/marathon-createapp1.png)
 
