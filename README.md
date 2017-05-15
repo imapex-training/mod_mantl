@@ -532,6 +532,7 @@ The configuraiton of the traefik behavior can be accomplished with labels in Mar
 [item]: # (slide)
 
 **Traefik UI**
+
 ![Traefik](images/traefik1.png)
 
 [item]: # (/slide)
@@ -541,6 +542,7 @@ The configuraiton of the traefik behavior can be accomplished with labels in Mar
 [item]: # (slide)
 
 **Running Application**
+
 ![Traefik](images/traefik_demoapp1.png)
 
 [item]: # (/slide)
@@ -566,7 +568,7 @@ With microservices, the number and lifespan for a service varies greatly and cha
 
 ## Go do it exercises 
 
-Review the available labels for Traefik and Marathon integraiton (link above) and see if you can update the demo application such that
+Review the available labels for Traefik and Marathon integration (link above) and see if you can update the demo application such that
 it is available at a different hostname/URL.
 
 [item]: # (/slide)
