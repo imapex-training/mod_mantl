@@ -69,9 +69,9 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 
 [item]: # (slide)
 
-    **DevNet Mantl Sandbox**
-
-    ![Mantl Dash](images/mantl-dash.png) 
+**DevNet Mantl Sandbox**
+    
+![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
 
@@ -83,8 +83,8 @@ Though most actual work with Marathon would be through the API, having an unders
 
 [item]: # (slide)
 
-    **Marathon UI**
-    ![Marathon](images/marathon1.png) 
+**Marathon UI**
+![Marathon](images/marathon1.png) 
 
 [item]: # (/slide)
 
@@ -94,51 +94,51 @@ Though most actual work with Marathon would be through the API, having an unders
 
 [item]: # (slide)
 
-    **New Application**    
-    ![Create App](images/marathon-createapp1.png)
+**New Application**    
+![Create App](images/marathon-createapp1.png)
 
 [item]: # (/slide)
 
-	* Provide Details on the Docker container.  
+* Provide Details on the Docker container.  
 
 [item]: # (slide)
 
-        **Container Details**
-        ![Create App](images/marathon-createapp2.png)
+**Container Details**
+![Create App](images/marathon-createapp2.png)
 
 [item]: # (/slide)
 
-		* Don't forget to indicate the Docker tag
-		* Network will typically be "Bridged"
-		* The ports listed under port mappings will make the container accessable by other services and external users.  
-		* If the container needs to have volumes mapped in, you can do that here as well.  
+* Don't forget to indicate the Docker tag
+* Network will typically be "Bridged"
+* The ports listed under port mappings will make the container accessable by other services and external users.  
+* If the container needs to have volumes mapped in, you can do that here as well.  
 
-	* Many times you'll need to configure environment variables for the applications to operate correctly.  
+* Many times you'll need to configure environment variables for the applications to operate correctly.  
 
 [item]: # (slide)
 
-        **Environment Variables**
-		 ![Create App](images/marathon-createapp3.png)
+**Environment Variables**
+![Create App](images/marathon-createapp3.png)
 
 
 [item]: # (/slide)
 
-	* Though not required, it is recommended to include Health Checks for all applications.  
+* Though not required, it is recommended to include Health Checks for all applications.  
 
 [item]: # (slide)
 
-        **Health Checks**
-		 ![Create App](images/marathon-createapp4.png)
+**Health Checks**
+ ![Create App](images/marathon-createapp4.png)
 
 [item]: # (/slide)
 
-	* Once saved and deployed, your application should be available for use.  The applicaiton we deployed is the [data tier for the MyHero Demo Application](https://github.com/hpreston/myhero_data).  This service delivers an API and can be tested at [http://username-data.app.mantldevnetsandbox.com/hero_list](http://username-data.app.mantldevnetsandbox.com/hero_list)
+* Once saved and deployed, your application should be available for use.  The applicaiton we deployed is the [data tier for the MyHero Demo Application](https://github.com/hpreston/myhero_data).  This service delivers an API and can be tested at [http://username-data.app.mantldevnetsandbox.com/hero_list](http://username-data.app.mantldevnetsandbox.com/hero_list)
 
 [item]: # (slide)
 
-        **Deployed Micro-Service**
-        
-        ![Create App](images/marathon-appdemo1.png)
+**Deployed Micro-Service**
+    
+![Create App](images/marathon-appdemo1.png)
 
 [item]: # (/slide)
 
@@ -146,8 +146,8 @@ Though most actual work with Marathon would be through the API, having an unders
 
 [item]: # (slide)
 
-    **GUI Management**
-	![Manage App](images/marathon-manageapp1.png)
+**GUI Management**
+![Manage App](images/marathon-manageapp1.png)
 
 
 [item]: # (/slide)
@@ -164,15 +164,15 @@ Marathon provides a very robust REST API that can be used for all actions within
 
 [item]: # (slide)
 
-    **Environment Variables**
+**Environment Variables**
     
-    ```
-    export MARATHON_URL=https://mantlsandbox.cisco.com:8080/v2
-    export MARATHON_USER=admin
-    # Fill in Password
-    export MARATHON_PASSWORD=********	
-    # Use your username from above
-    export MYUSERNAME=username
+```
+export MARATHON_URL=https://mantlsandbox.cisco.com:8080/v2
+export MARATHON_USER=admin
+# Fill in Password
+export MARATHON_PASSWORD=********	
+# Use your username from above
+export MYUSERNAME=username
     ```
 
 
@@ -182,23 +182,23 @@ Marathon provides a very robust REST API that can be used for all actions within
 
 [item]: # (slide)
 
-    **List Applications**
+**List Applications**
     
-    ```
-    curl -k -X GET -u $MARATHON_USER:$MARATHON_PASSWORD \
-    	-H "Content-type: application/json" \
-    	$MARATHON_URL/apps \
-    	| python -m json.tool
-    	
-    # this will dump out a ton of data for every application that is deployed
-    # Let's filter it down to just the one we built 
-    	
-    curl -k -X GET -u $MARATHON_USER:$MARATHON_PASSWORD \
-    	-H "Content-type: application/json" \
-    	$MARATHON_URL/apps/$MYUSERNAME/data \
-    	| python -m json.tool
-    	
-    ```
+```
+curl -k -X GET -u $MARATHON_USER:$MARATHON_PASSWORD \
+	-H "Content-type: application/json" \
+	$MARATHON_URL/apps \
+	| python -m json.tool
+	
+# this will dump out a ton of data for every application that is deployed
+# Let's filter it down to just the one we built 
+	
+curl -k -X GET -u $MARATHON_USER:$MARATHON_PASSWORD \
+	-H "Content-type: application/json" \
+	$MARATHON_URL/apps/$MYUSERNAME/data \
+	| python -m json.tool
+	
+```
 	
 
 [item]: # (/slide)
@@ -207,16 +207,16 @@ Marathon provides a very robust REST API that can be used for all actions within
 
 [item]: # (slide)
 
-    **Update Application**	
+**Update Application**	
     
-    ```
-    curl -k -X PUT -u $MARATHON_USER:$MARATHON_PASSWORD \
-    	-H "Content-type: application/json" \
-    	$MARATHON_URL/apps/$MYUSERNAME/data \
-    	-d '{"instances": 3}' \
-    	| python -m json.tool
-    	
-    ```
+```
+curl -k -X PUT -u $MARATHON_USER:$MARATHON_PASSWORD \
+	-H "Content-type: application/json" \
+	$MARATHON_URL/apps/$MYUSERNAME/data \
+	-d '{"instances": 3}' \
+	| python -m json.tool
+	
+```
 
 
 [item]: # (/slide)
@@ -225,13 +225,13 @@ Marathon provides a very robust REST API that can be used for all actions within
 
 [item]: # (slide)
 
-    **Delete Application**
+**Delete Application**
     
-    ```
-    curl -k -X DELETE -u $MARATHON_USER:$MARATHON_PASSWORD \
-    		-H "Content-type: application/json" \
-    		$MARATHON_URL/apps/$MYUSERNAME/data 
-    ```
+```
+curl -k -X DELETE -u $MARATHON_USER:$MARATHON_PASSWORD \
+		-H "Content-type: application/json" \
+		$MARATHON_URL/apps/$MYUSERNAME/data 
+```
 
 
 [item]: # (/slide)
@@ -293,16 +293,16 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 
 [item]: # (slide)
 
-    **DevNet Mantl Sandbox**
+**DevNet Mantl Sandbox**
 
-    ![Mantl Dash](images/mantl-dash.png) 
+![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
 
 [item]: # (slide)
 
-    **Consul UI**
-    ![Consul](images/consul1.png)
+**Consul UI**
+![Consul](images/consul1.png)
 
 [item]: # (/slide)
 
@@ -318,62 +318,62 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 
 [item]: # (slide)
 
-    **Consul DNS Lookup**
+**Consul DNS Lookup**
     
-    ```
-    # this shows an example command and output for reference.  
-    	
-    # do a regular lookup
-    dig @control.mantl.domain.intra app-dev.service.consul
-    	
-    ; <<>> DiG 9.8.3-P1 <<>> @control.mantl.domain.intra app-dev.service.consul
-    ; (3 servers found)
-    ;; global options: +cmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42128
-    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
-    	
-    ;; QUESTION SECTION:
-    ;app-dev.service.consul.		IN	A
-    	
-    ;; ANSWER SECTION:
-    app-dev.service.consul.	0	IN	A	10.101.129.119
-    	
-    ;; Query time: 187 msec
-    ;; SERVER: 10.101.129.123#53(10.101.129.123)
-    ;; WHEN: Tue Aug  2 16:13:21 2016
-    ;; MSG SIZE  rcvd: 78	
-    	
-    # We get an A record back so we know the IP 
-    # of the host running the app, but not the port
-    	
-    # Same lookup, but this time for the SRV record
-    dig @control.mantl.domain.intra app-dev.service.consul SRV
-    	
-    ; <<>> DiG 9.8.3-P1 <<>> @control.mantl.domain.intra app-dev.service.consul SRV
-    ; (3 servers found)
-    ;; global options: +cmd
-    ;; Got answer:
-    ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59685
-    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-    	
-    ;; QUESTION SECTION:
-    ;app-dev.service.consul.		IN	SRV
-    	
-    ;; ANSWER SECTION:
-    app-dev.service.consul.	0	IN	SRV	1 1 25797 green2-worker-001.node.green.consul.
-    	
-    ;; ADDITIONAL SECTION:
-    green2-worker-001.node.green.consul. 0 IN A	10.101.129.119
-    	
-    ;; Query time: 140 msec
-    ;; SERVER: 10.101.129.123#53(10.101.129.123)
-    ;; WHEN: Tue Aug  2 16:13:23 2016
-    ;; MSG SIZE  rcvd: 168
-    	
-    	
-    # Now we have the IP and the Port so can access this service	
-    ```
+```
+# this shows an example command and output for reference.  
+	
+# do a regular lookup
+dig @control.mantl.domain.intra app-dev.service.consul
+	
+; <<>> DiG 9.8.3-P1 <<>> @control.mantl.domain.intra app-dev.service.consul
+; (3 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42128
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+	
+;; QUESTION SECTION:
+;app-dev.service.consul.		IN	A
+	
+;; ANSWER SECTION:
+app-dev.service.consul.	0	IN	A	10.101.129.119
+	
+;; Query time: 187 msec
+;; SERVER: 10.101.129.123#53(10.101.129.123)
+;; WHEN: Tue Aug  2 16:13:21 2016
+;; MSG SIZE  rcvd: 78	
+	
+# We get an A record back so we know the IP 
+# of the host running the app, but not the port
+	
+# Same lookup, but this time for the SRV record
+dig @control.mantl.domain.intra app-dev.service.consul SRV
+	
+; <<>> DiG 9.8.3-P1 <<>> @control.mantl.domain.intra app-dev.service.consul SRV
+; (3 servers found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 59685
+;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+	
+;; QUESTION SECTION:
+;app-dev.service.consul.		IN	SRV
+	
+;; ANSWER SECTION:
+app-dev.service.consul.	0	IN	SRV	1 1 25797 green2-worker-001.node.green.consul.
+	
+;; ADDITIONAL SECTION:
+green2-worker-001.node.green.consul. 0 IN A	10.101.129.119
+	
+;; Query time: 140 msec
+;; SERVER: 10.101.129.123#53(10.101.129.123)
+;; WHEN: Tue Aug  2 16:13:23 2016
+;; MSG SIZE  rcvd: 168
+	
+	
+# Now we have the IP and the Port so can access this service	
+```
 
 [item]: # (/slide)
 
@@ -422,9 +422,9 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 
 [item]: # (slide)
 
-    **DevNet Mantl Sandbox**
+**DevNet Mantl Sandbox**
 
-    ![Mantl Dash](images/mantl-dash.png) 
+![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
 
@@ -432,20 +432,20 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 
 [item]: # (slide)
 
-    **Mesos Dashboard**
-	![Mesos Dash](images/mesos-dash1.png) 
+**Mesos Dashboard**
+![Mesos Dash](images/mesos-dash1.png) 
 
 [item]: # (/slide)
 
-	* You'll see a list of all active tasks as well as statistics.  
-	* An interesting thing to note is on the bottom of the left pane.  Itshows the total capaciaty from CPU and RAM in the cluster.  If idle gets too low, new tasks won't start.  
+* You'll see a list of all active tasks as well as statistics.  
+* An interesting thing to note is on the bottom of the left pane.  Itshows the total capaciaty from CPU and RAM in the cluster.  If idle gets too low, new tasks won't start.  
 
 * Click the **Sandbox** link on one of the tasks 
 
 [item]: # (slide)
 
-    **Application Sandbox**
-	![Mesos](images/mesos-sandbox1.png) 
+**Application Sandbox**
+![Mesos](images/mesos-sandbox1.png) 
 
 [item]: # (/slide)
 
@@ -511,9 +511,9 @@ The configuraiton of the traefik behavior can be accomplished with labels in Mar
 
 [item]: # (slide)
 
-    **DevNet Mantl Sandbox**
+**DevNet Mantl Sandbox**
 
-    ![Mantl Dash](images/mantl-dash.png) 
+![Mantl Dash](images/mantl-dash.png) 
 
 [item]: # (/slide)
 
@@ -533,8 +533,8 @@ The configuraiton of the traefik behavior can be accomplished with labels in Mar
 
 [item]: # (slide)
 
-    **Traefik UI**
-    ![Traefik](images/traefik1.png)
+**Traefik UI**
+![Traefik](images/traefik1.png)
 
 [item]: # (/slide)
 
@@ -542,8 +542,8 @@ The configuraiton of the traefik behavior can be accomplished with labels in Mar
 
 [item]: # (slide)
 
-    **Running Application**
-    ![Traefik](images/traefik_demoapp1.png)
+**Running Application**
+![Traefik](images/traefik_demoapp1.png)
 
 [item]: # (/slide)
 

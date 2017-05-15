@@ -1,4 +1,4 @@
 
-    **Running Application**
-    ![Traefik](images/traefik_demoapp1.png)
+**Running Application**
+![Traefik](images/traefik_demoapp1.png)
 
