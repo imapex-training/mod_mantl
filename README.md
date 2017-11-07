@@ -48,7 +48,7 @@ Writing code that runs effectively on your laptop isn't enough anymore, if it ev
 
 [item]: # (/slide)
 
-Marathon is one of the components of Mantl that can allow developers to deploy microservice applications easily.  Marathon is great for long running workloads based on Docker containers or executables (ie a JAR file).  It uses Mesos (another part of Mantl) to actual schedule the jobs onto an available worker node.  
+Marathon is one of the components of Mantl that can allow developers to deploy microservice applications easily.  Marathon is great for long running workloads based on Docker containers or executables (ie a JAR file).  It uses Mesos (another part of Mantl) to actually schedule the jobs onto an available worker node.  
 
 Marathon provides users with a Web GUI and API for configuring and managing applications.  There is also a set of command line utilities that are part of DCOS (Mesosphere's Data Center Operating System).  
 
@@ -108,9 +108,9 @@ Though most actual work with Marathon would be through the API, having an unders
 
 [item]: # (/slide)
 
-* Don't forget to indicate the Docker tag
-* Network will typically be "Bridged"
-* The ports listed under port mappings will make the container accessable by other services and external users.  
+* Don't forget to indicate the Docker tag.
+* Network will typically be "Bridged".
+* The ports listed under port mappings will make the container accessible by other services and external users.  
 * If the container needs to have volumes mapped in, you can do that here as well.  
 
 * Many times you'll need to configure environment variables for the applications to operate correctly.  
@@ -133,7 +133,7 @@ Though most actual work with Marathon would be through the API, having an unders
 
 [item]: # (/slide)
 
-* Once saved and deployed, your application should be available for use.  The applicaiton we deployed is the [data tier for the MyHero Demo Application](https://github.com/hpreston/myhero_data).  This service delivers an API and can be tested at [http://username-data.app.mantldevnetsandbox.com/hero_list](http://username-data.app.mantldevnetsandbox.com/hero_list)
+* Once saved and deployed, your application should be available for use.  The application we deployed is the [data tier for the MyHero Demo Application](https://github.com/hpreston/myhero_data).  This service delivers an API and can be tested at [http://username-data.app.mantldevnetsandbox.com/hero_list](http://username-data.app.mantldevnetsandbox.com/hero_list)
 
 [item]: # (slide)
 
@@ -271,7 +271,7 @@ Visit [hpreston\myhero_demo](https://github.com/hpreston/myhero_demo) and deploy
 
 [item]: # (/slide)
 
-A big element of any microservices architecture is how service discovery will be addressed.  Service discovery refers to the need for each of the different microservices in an application to be able to find and reference each other automatically.  When you have dozens of services in an applicaiton, that are backed by constantly scaling up and down container workloads, where the IPs, Ports, Hosts, etc are constantly changing, you can't rely on old methods of hard coding in IPs or server names.  
+A big element of any microservices architecture is how service discovery will be addressed.  Service discovery refers to the need for each of the different microservices in an application to be able to find and reference each other automatically.  When you have dozens of services in an application, that are backed by constantly scaling up and down container workloads, where the IPs, Ports, Hosts, etc are constantly changing, you can't rely on old methods of hard coding in IPs or server names.  
 
 Consul is an open source application that provides Service Discovery for microservice platforms.  Through plugins and integration, it tracks platforms like Marathon to automatically register new services.  
 
@@ -306,7 +306,7 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 
 * Select one of the services listed
 	* You can see the details that Consul knows about the service in the Web UI.  This includes the worker node the service is running on, and any health checks being monitored.  
-* To find out the full details about the service, that is the the host, ip and port needed to access the application.  You would need to leverage the API or perform a DNS lookup.  
+* To find out the full details about the service, that is the host, ip and port needed to access the application.  You would need to leverage the API or perform a DNS lookup.  
 	* For security purposes, consul lookups via the API or DNS are often secured from external users.  Only trusted internal services should have a need to access the Consul data.  
 	* **_If you have access to a Mantl Cluster you can execute these exercises as well.  Otherwise they will be demonstrated._**
 
@@ -390,7 +390,7 @@ green2-worker-001.node.green.consul. 0 IN A	10.101.129.119
 
 [item]: # (/slide)
 
-For most basic, single service applications, Service Discovery is something that can be ignored.  However any actual application will have multiple services, and having a method of addressing discovery is critical to an cloud native solution.  Even if our demo's don't require it, it is importnat to understand the problem it is solving, and how it works.  
+For most basic, single service applications, Service Discovery is something that can be ignored.  However any actual application will have multiple services, and having a method of addressing discovery is critical to an cloud native solution.  Even if our demo's don't require it, it is important to understand the problem it is solving, and how it works.  
 
 [item]: # (slide)
 
@@ -406,7 +406,7 @@ The MyHero Demo application leverages service discovery with Consul for the APP 
 
 [item]: # (/slide)
 
-Mesos is the actual scheduler used by Marathon to provision workloads onto hosts.  Mesos can be useful when needing to diagnosis a problem with an application that isn't behaving as expected.  Each application runs in a "sandbox'd" area with Mesos where all std_out and std_err logs are captured and made available.  
+Mesos is the actual scheduler used by Marathon to provision workloads onto hosts.  Mesos can be useful when needing to diagnose a problem with an application that isn't behaving as expected.  Each application runs in a "sandbox'd" area with Mesos where all std_out and std_err logs are captured and made available.  
 
 [item]: # (slide)
 
@@ -436,7 +436,7 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 [item]: # (/slide)
 
 * You'll see a list of all active tasks as well as statistics.  
-* An interesting thing to note is on the bottom of the left pane.  Itshows the total capaciaty from CPU and RAM in the cluster.  If idle gets too low, new tasks won't start.  
+* An interesting thing to note is on the bottom of the left pane.  It shows the total capacity from CPU and RAM in the cluster.  If idle gets too low, new tasks won't start.  
 
 * Click the **Sandbox** link on one of the tasks 
 
@@ -465,7 +465,7 @@ We will leverage the [Cisco DevNet Mantl Sandbox](https://developer.cisco.com/si
 
 [item]: # (/slide)
 
-The scheduler function of a Cloud Native Stack is a criticial component to scaling and maintaining a reliable platform for produciton deployments.  Running a docker container on a laptop is vastly different from managing them across an entire data center.  As we have discussions with developers, and help build platforms for the next generation data center, this knowledge will be critical.  
+The scheduler function of a Cloud Native Stack is a critical component to scaling and maintaining a reliable platform for production deployments.  Running a docker container on a laptop is vastly different from managing them across an entire data center.  As we have discussions with developers, and help build platforms for the next generation data center, this knowledge will be critical.  
 
 It is also important to understand the players in this space, and how they stack up amongst each other.  
 
@@ -493,7 +493,7 @@ Explore the Mesos interface and see if you can find answers to these questions..
 
 Traefik provides the load balancing and reverse proxy for Mantl applications.  In the Mantl architecture the "edge" nodes are the ingress/egress points for all traffic with the cluster.  
 
-Traefik monitors applicaitons deployed in the cluster, creates new frontend and backend connections, as well as auto-scales them in line with the actions taken in Marathon (as an example).  
+Traefik monitors applications deployed in the cluster, creates new frontend and backend connections, as well as auto-scales them in line with the actions taken in Marathon (as an example).  
 
 At installation, the Traefik is configured with a DNS domain that is used as the base for all applications.  This DNS Domain should be configured with a wildcard entry pointing at the public IPs of the edge servers.  This enables every application to automatically be active and available.  
 
@@ -562,7 +562,7 @@ The configuraiton of the traefik behavior can be accomplished with labels in Mar
 
 [item]: # (/slide)
 
-With microservices, the number and lifespan for a service varies greatly and changes on a dime.  Every cloud native architecture requires a method to seamlessly provide access to these applications, and loadbalanceers/reverse proxies play a huge role.  Traditional platforms in this space weren't designed for these workloads, so solutions like Traefik, nginx, and HA Proxy are often used in place of traditional load balancing appliances.  It is important to understand their place in an application architecture, and what unique challenges this environment poses to them.  
+With microservices, the number and lifespan for a service varies greatly and changes on a dime.  Every cloud native architecture requires a method to seamlessly provide access to these applications, and loadbalancers/reverse proxies play a huge role.  Traditional platforms in this space weren't designed for these workloads, so solutions like Traefik, nginx, and HA Proxy are often used in place of traditional load balancing appliances.  It is important to understand their place in an application architecture, and what unique challenges this environment poses to them.  
 
 [item]: # (slide)
 
